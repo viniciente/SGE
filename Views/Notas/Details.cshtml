@@ -1,0 +1,42 @@
+﻿@model SGE.Models.Notas
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Notas</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Materias)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Materias.Titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alunos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alunos.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Etapas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Etapas.Titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nota)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nota)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,30 @@
+﻿@model SGE.Models.Materias
+
+@{
+    ViewData["Title"] = "Detalhe";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Materias</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Professores)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Professores.Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
